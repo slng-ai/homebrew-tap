@@ -1,25 +1,25 @@
 class Voiceai < Formula
   desc "Voiceai CLI — text-to-speech, speech-to-text, streaming"
   homepage "https://slng.ai"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.7/voiceai-darwin-arm64"
-      sha256 "f5129ace06c00a7041833f1b0aff81c84cf3d9e29dcd57984e3abad78b1e0dcc"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.8/voiceai-darwin-arm64"
+      sha256 "a3b33f53d4a19f39de32557331247314063a2c9fca427a50f1ee8515be525969"
     else
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.7/voiceai-darwin-x64"
-      sha256 "685bc5eebdef433873bbc90b0631d47e2e6c486ed4e5ebd53d1716e66eeab4b0"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.8/voiceai-darwin-x64"
+      sha256 "76749bfd0904e5a0105036039e552abc876553d1635ad3f3b7ca7602f98762be"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.7/voiceai-linux-arm64"
-      sha256 "7ad8f9e01892c58c045c242fbae5b2d1a20e15278312e5e11076ab5007751b8f"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.8/voiceai-linux-arm64"
+      sha256 "6cc1224841e6819dec5705435bf45e64409a70dee516f0462df1637e274155de"
     else
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.7/voiceai-linux-x64"
-      sha256 "bc298de32ed9928a62950630765348ce308dae84c43dc9eaae7048daf468a7a2"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.8/voiceai-linux-x64"
+      sha256 "e7b2ae4eaf09cbdefded9448221564de53ad2e220ff048ccca1d8a5a9e7b5ce9"
     end
   end
 
@@ -27,6 +27,14 @@ class Voiceai < Formula
 
   def install
     bin.install Dir["voiceai-*"].first => "voiceai"
+  end
+
+  def caveats
+    <<~EOS
+      Config lives at ~/.config/voiceai/ and is NOT removed by `brew uninstall`.
+      To wipe it (and the legacy ~/.config/slng/) before uninstalling, run:
+        voiceai config reset --force
+    EOS
   end
 
   test do
