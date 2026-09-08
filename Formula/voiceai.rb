@@ -1,25 +1,25 @@
 class Voiceai < Formula
   desc "Voiceai CLI — text-to-speech, speech-to-text, streaming"
   homepage "https://slng.ai"
-  version "0.1.17"
+  version "0.1.18"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.17/voiceai-darwin-arm64"
-      sha256 "fea97d319ec24353a6c7aca0f05f6f534203ecb41c747c68ea593f57a4c9edb3"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.18/voiceai-darwin-arm64"
+      sha256 "93365905c25a0e948e7f7017075d453bb79bab4c1080f1fae1b162c86607cde1"
     else
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.17/voiceai-darwin-x64"
-      sha256 "ab00044818d9ee8ace3cf3648de97e9ee7345e44d704622469a82a0e1014fbbf"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.18/voiceai-darwin-x64"
+      sha256 "02be6d1d801b6549280841cc0d730d7cd24a2200694a8ce78ab8b651675fb79e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.17/voiceai-linux-arm64"
-      sha256 "0ab863548b1bc15dc9d220e0b86531539829ba7e2c5dad3091b02fb94bf21c49"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.18/voiceai-linux-arm64"
+      sha256 "7753d6908eedc4fa7c2afb9fc9a0cc0b8e2a65a83ba3784121af47a2bbbebc0c"
     else
-      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.17/voiceai-linux-x64"
-      sha256 "eeaa5e14c14a84679be359b7cb1faf353218ec5a572190d24129602cc288165b"
+      url "https://github.com/slng-ai/sdks/releases/download/cli-v0.1.18/voiceai-linux-x64"
+      sha256 "86c5ae00bb38c8724fe4a99092fc14cabfa996a570db693b8f082cf510b1a921"
     end
   end
 
