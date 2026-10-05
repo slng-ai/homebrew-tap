@@ -8,25 +8,25 @@ cask "unmute" do
     end
   end
 
-  version "0.6.1"
+  version "0.7.0"
 
   on_macos do
     on_arm do
-      sha256 "972191dc0c879bd37cf8544d01e1189e8d6e056c014b562fc646a437d0201692"
+      sha256 "1664f131212eb0a3ff022041de72f919e517f8efdc28e66ba6a835eec627f467"
       url "https://github.com/slng-ai/unmute/releases/download/v#{version}/unmute_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e2f1ddd9f67b72276f3a0480505d99be11673bc6d218d81d5f721b714bcca243"
+      sha256 "415ebc6773892a24001254fcdf7689e48f0324497bc9d8ef62984602c2c97534"
       url "https://github.com/slng-ai/unmute/releases/download/v#{version}/unmute_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "c0de2405c6ad8e9251991ebbf915db2a8dc7d3fc8a43f05578f34f6bc560f3b2"
+      sha256 "6281a56f42b82e5247ab8e8990ba4e636feb14a883b9311775ef65bbe1f47f91"
       url "https://github.com/slng-ai/unmute/releases/download/v#{version}/unmute_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "54cc48cfc477ac8ac05c4d83ac416b3cb2122d20f297ff61b42960573d33377f"
+      sha256 "b8cb3ac9f767f6e226bb5a9cf6c33e8300fa9db6846ae819ce563d0e1b3375a0"
       url "https://github.com/slng-ai/unmute/releases/download/v#{version}/unmute_#{version}_linux_amd64.tar.gz"
     end
   end
